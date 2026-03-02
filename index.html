@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perle Season 1 Stats</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Perle <span>Season 1 Stats</span></h1>
+            </div>
+            <nav class="main-nav">
+                <a href="https://x.com/AxinSpark" target="_blank" class="nav-link">Created by @AxinSpark</a>
+                <a href="https://app.perle.xyz/" target="_blank" class="nav-link">Perle 任务官网</a>
+                <a href="https://app.perle.xyz/marketplace" target="_blank" class="nav-link">任务列表</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 徽章信息区域 -->
+        <section class="badge-section">
+            <h2 class="section-title">🏆 徽章里程碑</h2>
+            <div id="badgeList" class="badge-grid">
+                <!-- 徽章卡片将通过 JS 动态插入 -->
+            </div>
+        </section>
+
+        <!-- 增长趋势图表区域 -->
+        <section class="chart-section">
+            <h2 class="section-title">📈 增长趋势</h2>
+            <div class="chart-container">
+                <canvas id="growthChart"></canvas>
+            </div>
+            <p class="chart-note">⚠️ 说明：当前持有人总数为实时链上数据，但由于缺乏历史数据索引，图表中的每日走势为基于当前总数的模拟估算值。</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Created by <a href="https://x.com/AxinSpark" target="_blank" class="author-link">@AxinSpark</a></p>
+            <p>&copy; 2026 Perle Season 1 Stats. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Data Script (Must be loaded before script.js) -->
+    <script src="js/badge_data.js?v=1772416575"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
