@@ -32,6 +32,18 @@
             </div>
         </section>
 
+        <!-- 批量查询区域 -->
+        <section class="batch-query-section">
+            <h2 class="section-title">🔍 批量查询 Human CAPTCHA</h2>
+            <div class="query-container">
+                <p class="section-desc">输入钱包地址（每行一个），查询是否持有已验证的 Human CAPTCHA NFT。</p>
+                <textarea id="walletAddresses" placeholder="请输入钱包地址，每行一个..." rows="5"></textarea>
+                <button id="queryBtn" class="primary-btn">开始查询</button>
+                <div id="queryStatus" class="status-message"></div>
+                <div id="queryResults" class="results-container"></div>
+            </div>
+        </section>
+
         <!-- 增长趋势图表区域 -->
         <section class="chart-section">
             <h2 class="section-title">📈 增长趋势</h2>
@@ -50,7 +62,17 @@
     </footer>
 
     <!-- Data Script (Must be loaded before script.js) -->
-    <script src="js/badge_data.js?v=1773454112"></script>
+    <script src="js/badge_data.js?v=1773473919"></script>
     <script src="js/script.js"></script>
+
+    <!-- Twitter Follow Modal -->
+    <div id="twitterModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>🎉 感谢您的关注！</h2>
+            <p>查询工具制作不易，您的关注就是我最大的支持！</p>
+            <p>请关注我的推特以获取更多更新。</p>
+            <button id="followBtn" class="primary-btn full-width">👉 关注 @AxinSpark</button>
+        </div>
+    </div>
 </body>
 </html>

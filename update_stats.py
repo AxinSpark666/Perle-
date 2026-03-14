@@ -16,8 +16,12 @@ INDEX_FILE = "index.html"
 BADGES = [
     {"id": "newcomer", "address": "Cpy7V4GKHVbJaVchR5qKPANtccjVC5bBbtabZJX6E2gT"},
     {"id": "researcher", "address": "7oXuyGZAUzmij4c76uz9TvM2seDcsRWP1zhfLMJfRdyk"},
-    {"id": "scholar", "address": "7AEpoq5eKoSRUN36CTFFPQESDXepcSby7CfQZs44wgds"}
+    {"id": "scholar", "address": "7AEpoq5eKoSRUN36CTFFPQESDXepcSby7CfQZs44wgds"},
+    {"id": "speed_demon", "address": "5RgA8Vo6FnnAzre12JsLicoc66B7h8cwG99RRPFGTAgj"}
 ]
+
+# Human CAPTCHA 特殊配置 (Creator Address)
+HUMAN_CAPTCHA_CREATOR = "DB1HvGZNTyRjQvoQfBLFVojpnSBzEwNKrFH4bMZD3uZb"
 
 def get_beijing_date():
     """获取当前北京时间的日期 (YYYY-MM-DD)"""
@@ -75,6 +79,68 @@ def fetch_count(address):
     
     return None
 
+def fetch_creator_assets_count(creator_address):
+    """获取指定 Creator 的所有资产总数 (需要遍历)"""
+    # 简单的遍历统计逻辑
+    page = 1
+    limit = 1000
+    all_owners = set()
+    total_items = 0
+    
+    print(f"Fetching assets for creator: {creator_address}...")
+    
+    while True:
+        try:
+            payload = {
+                "jsonrpc": "2.0",
+                "id": "my-id",
+                "method": "getAssetsByCreator",
+                "params": {
+                    "creatorAddress": creator_address,
+                    "onlyVerified": True,
+                    "page": page,
+                    "limit": limit
+                }
+            }
+            
+            req = urllib.request.Request(
+                RPC_ENDPOINT,
+                data=json.dumps(payload).encode('utf-8'),
+                headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+            )
+            
+            with urllib.request.urlopen(req, timeout=30) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                
+                if 'error' in data:
+                    print(f"Error fetching creator assets: {data['error']}")
+                    break
+                    
+                result = data.get('result', {})
+                items = result.get('items', [])
+                if not items:
+                    break
+                    
+                total_items += len(items)
+                for item in items:
+                    owner = item.get('ownership', {}).get('owner')
+                    if owner:
+                        all_owners.add(owner)
+                
+                print(f"  Page {page}: Found {len(items)} items. Total unique owners: {len(all_owners)}")
+                
+                if len(items) < limit:
+                    break
+                    
+                page += 1
+                time.sleep(0.1) # Avoid rate limiting
+                
+        except Exception as e:
+            print(f"Exception fetching creator assets: {e}")
+            break
+            
+    return len(all_owners)
+
 def update_stats():
     print(f"Starting update at {datetime.datetime.now()}")
     
@@ -99,6 +165,7 @@ def update_stats():
             existing_index = i
             break
     
+    new_entry = {}
     if existing_index != -1:
         print("Update existing entry for today.")
         new_entry = history[existing_index]
@@ -112,11 +179,20 @@ def update_stats():
         }
         history.append(new_entry)
 
+    # 2.1 抓取常规徽章
     for badge in BADGES:
         print(f"Fetching {badge['id']}...")
         count = fetch_count(badge['address'])
         if count is not None:
             new_entry[badge['id']] = count
+            print(f"  -> {badge['id']}: {count}")
+
+    # 2.2 抓取 Human CAPTCHA (特殊逻辑)
+    print(f"Fetching human_captcha...")
+    human_captcha_count = fetch_creator_assets_count(HUMAN_CAPTCHA_CREATOR)
+    if human_captcha_count > 0:
+        new_entry["human_captcha"] = human_captcha_count
+        print(f"  -> human_captcha: {human_captcha_count}")
             
     # 3. 保存 (保持按日期排序)
     # 简单的按日期字符串排序
@@ -130,6 +206,31 @@ def update_stats():
     with open('js/badge_data.js', 'w', encoding='utf-8') as f:
         f.write(js_content)
         
+    # 更新 script.js 中的 Human CAPTCHA 静态数值 (如果需要的话，或者前端改为读取 BADGE_HISTORY 的最新一条)
+    # 为了保持前端逻辑简单，我们这里尝试直接替换 script.js 中的 holders: xxxxx
+    # 这样用户打开页面时，human_captcha 也是最新的
+    try:
+        if human_captcha_count > 0:
+            script_path = 'js/script.js'
+            if os.path.exists(script_path):
+                with open(script_path, 'r', encoding='utf-8') as f:
+                    js_code = f.read()
+                
+                # 正则替换 Human CAPTCHA 的 holders 值
+                # 匹配模式：holders: \d+, // 数据更新时间
+                new_js_code = re.sub(
+                    r'(holders:\s*)(\d+)(,\s*//\s*数据更新时间：)([\d-]+)', 
+                    f'\\g<1>{human_captcha_count}\\g<3>{today_date}', 
+                    js_code
+                )
+                
+                if new_js_code != js_code:
+                    with open(script_path, 'w', encoding='utf-8') as f:
+                        f.write(new_js_code)
+                    print(f"Updated {script_path} with new Human CAPTCHA count: {human_captcha_count}")
+    except Exception as e:
+        print(f"Failed to update script.js: {e}")
+
     print(f"Successfully updated {DATA_FILE} and js/badge_data.js")
 
     # 更新 index.html 中的引用，增加版本号以防止缓存

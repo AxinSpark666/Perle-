@@ -1,408 +1,324 @@
 window.BADGE_HISTORY = [
   {
-    "date": "2026-01-16",
-    "timestamp": 1768492800000,
-    "newcomer": 3043,
-    "researcher": 2850,
-    "scholar": 2032
-  },
-  {
-    "date": "2026-01-17",
-    "timestamp": 1768579200000,
-    "newcomer": 3492,
-    "researcher": 2950,
-    "scholar": 2108
-  },
-  {
-    "date": "2026-01-18",
-    "timestamp": 1768665600000,
-    "newcomer": 4289,
-    "researcher": 3051,
-    "scholar": 2169
-  },
-  {
-    "date": "2026-01-19",
-    "timestamp": 1768752000000,
-    "newcomer": 5357,
-    "researcher": 3154,
-    "scholar": 2229
-  },
-  {
-    "date": "2026-01-20",
-    "timestamp": 1768838400000,
-    "newcomer": 7464,
-    "researcher": 3397,
-    "scholar": 2337
-  },
-  {
-    "date": "2026-01-21",
-    "timestamp": 1768924800000,
-    "newcomer": 9787,
-    "researcher": 3779,
-    "scholar": 2484
-  },
-  {
-    "date": "2026-01-22",
-    "timestamp": 1769011200000,
-    "newcomer": 12761,
-    "researcher": 4110,
-    "scholar": 2618
-  },
-  {
-    "date": "2026-01-23",
-    "timestamp": 1769097600000,
-    "newcomer": 16329,
-    "researcher": 4455,
-    "scholar": 2778
-  },
-  {
-    "date": "2026-01-24",
-    "timestamp": 1769184000000,
-    "newcomer": 19785,
-    "researcher": 4829,
-    "scholar": 2898
-  },
-  {
-    "date": "2026-01-25",
-    "timestamp": 1769270400000,
-    "newcomer": 24038,
-    "researcher": 5219,
-    "scholar": 3019
-  },
-  {
-    "date": "2026-01-26",
-    "timestamp": 1769356800000,
-    "newcomer": 28309,
-    "researcher": 5786,
-    "scholar": 3155
-  },
-  {
-    "date": "2026-01-27",
-    "timestamp": 1769443200000,
-    "newcomer": 31478,
-    "researcher": 6302,
-    "scholar": 3285
-  },
-  {
     "date": "2026-01-28",
     "timestamp": 1769529600000,
-    "newcomer": 33887,
-    "researcher": 6606,
-    "scholar": 3373
+    "newcomer": 33878,
+    "researcher": 6604,
+    "scholar": 3374
   },
   {
     "date": "2026-01-29",
     "timestamp": 1769616000000,
-    "newcomer": 37628,
-    "researcher": 7000,
-    "scholar": 3479
+    "newcomer": 37619,
+    "researcher": 6998,
+    "scholar": 3480
   },
   {
     "date": "2026-01-30",
     "timestamp": 1769702400000,
-    "newcomer": 40630,
-    "researcher": 7289,
-    "scholar": 3638
+    "newcomer": 40621,
+    "researcher": 7287,
+    "scholar": 3639
   },
   {
     "date": "2026-01-31",
     "timestamp": 1769788800000,
-    "newcomer": 43944,
-    "researcher": 7579,
-    "scholar": 3684
+    "newcomer": 43935,
+    "researcher": 7577,
+    "scholar": 3685
   },
   {
     "date": "2026-02-01",
     "timestamp": 1769875200000,
-    "newcomer": 46232,
-    "researcher": 7884,
-    "scholar": 3733
+    "newcomer": 46223,
+    "researcher": 7882,
+    "scholar": 3734
   },
   {
     "date": "2026-02-02",
     "timestamp": 1769961600000,
-    "newcomer": 48710,
-    "researcher": 8295,
-    "scholar": 3778
+    "newcomer": 48701,
+    "researcher": 8293,
+    "scholar": 3779
   },
   {
     "date": "2026-02-03",
     "timestamp": 1770048000000,
-    "newcomer": 52130,
-    "researcher": 10460,
-    "scholar": 3911
+    "newcomer": 52121,
+    "researcher": 10458,
+    "scholar": 3912
   },
   {
     "date": "2026-02-04",
     "timestamp": 1770134400000,
-    "newcomer": 55855,
-    "researcher": 12979,
-    "scholar": 4155
+    "newcomer": 55846,
+    "researcher": 12977,
+    "scholar": 4156
   },
   {
     "date": "2026-02-05",
     "timestamp": 1770220800000,
-    "newcomer": 58903,
-    "researcher": 14340,
-    "scholar": 4241
+    "newcomer": 58894,
+    "researcher": 14338,
+    "scholar": 4242
   },
   {
     "date": "2026-02-06",
     "timestamp": 1770307200000,
-    "newcomer": 61519,
-    "researcher": 15495,
-    "scholar": 4338
+    "newcomer": 61510,
+    "researcher": 15493,
+    "scholar": 4339
   },
   {
     "date": "2026-02-07",
     "timestamp": 1770393600000,
-    "newcomer": 64417,
-    "researcher": 17164,
-    "scholar": 4437
+    "newcomer": 64408,
+    "researcher": 17162,
+    "scholar": 4438
   },
   {
     "date": "2026-02-08",
     "timestamp": 1770480000000,
-    "newcomer": 66142,
-    "researcher": 18643,
-    "scholar": 4572
+    "newcomer": 66133,
+    "researcher": 18641,
+    "scholar": 4573
   },
   {
     "date": "2026-02-09",
     "timestamp": 1770566400000,
-    "newcomer": 68375,
-    "researcher": 20353,
-    "scholar": 4612
+    "newcomer": 68366,
+    "researcher": 20351,
+    "scholar": 4613
   },
   {
     "date": "2026-02-10",
     "timestamp": 1770652800000,
-    "newcomer": 70245,
-    "researcher": 25561,
-    "scholar": 4870
+    "newcomer": 70236,
+    "researcher": 25559,
+    "scholar": 4871
   },
   {
     "date": "2026-02-11",
     "timestamp": 1770739200000,
-    "newcomer": 73152,
-    "researcher": 32483,
-    "scholar": 5190
+    "newcomer": 73143,
+    "researcher": 32481,
+    "scholar": 5191
   },
   {
     "date": "2026-02-12",
     "timestamp": 1770825600000,
-    "newcomer": 74400,
-    "researcher": 35769,
-    "scholar": 5301
+    "newcomer": 74391,
+    "researcher": 35767,
+    "scholar": 5302
   },
   {
     "date": "2026-02-13",
     "timestamp": 1770912000000,
-    "newcomer": 75501,
-    "researcher": 37601,
-    "scholar": 5410
+    "newcomer": 75492,
+    "researcher": 37599,
+    "scholar": 5411
   },
   {
     "date": "2026-02-14",
     "timestamp": 1770998400000,
-    "newcomer": 76287,
-    "researcher": 40677,
-    "scholar": 5513
+    "newcomer": 76278,
+    "researcher": 40675,
+    "scholar": 5514
   },
   {
     "date": "2026-02-15",
     "timestamp": 1771084800000,
-    "newcomer": 77063,
-    "researcher": 41852,
-    "scholar": 5576
+    "newcomer": 77054,
+    "researcher": 41850,
+    "scholar": 5577
   },
   {
     "date": "2026-02-16",
     "timestamp": 1771171200000,
-    "newcomer": 77448,
-    "researcher": 42482,
-    "scholar": 5619
+    "newcomer": 77439,
+    "researcher": 42480,
+    "scholar": 5620
   },
   {
     "date": "2026-02-17",
     "timestamp": 1771257600000,
-    "newcomer": 77884,
-    "researcher": 43240,
-    "scholar": 5902
+    "newcomer": 77875,
+    "researcher": 43238,
+    "scholar": 5903
   },
   {
     "date": "2026-02-18",
     "timestamp": 1771344000000,
-    "newcomer": 78292,
-    "researcher": 44036,
-    "scholar": 6111
+    "newcomer": 78283,
+    "researcher": 44034,
+    "scholar": 6112
   },
   {
     "date": "2026-02-19",
     "timestamp": 1771430400000,
-    "newcomer": 78683,
-    "researcher": 44505,
-    "scholar": 6262
+    "newcomer": 78674,
+    "researcher": 44503,
+    "scholar": 6263
   },
   {
     "date": "2026-02-20",
     "timestamp": 1771516800000,
-    "newcomer": 79084,
-    "researcher": 45212,
-    "scholar": 6319
+    "newcomer": 79075,
+    "researcher": 45210,
+    "scholar": 6320
   },
   {
     "date": "2026-02-21",
     "timestamp": 1771603200000,
-    "newcomer": 79419,
-    "researcher": 45841,
-    "scholar": 6362
+    "newcomer": 79410,
+    "researcher": 45839,
+    "scholar": 6363
   },
   {
     "date": "2026-02-22",
     "timestamp": 1771689600000,
-    "newcomer": 79752,
-    "researcher": 46309,
-    "scholar": 6492
+    "newcomer": 79743,
+    "researcher": 46307,
+    "scholar": 6493
   },
   {
     "date": "2026-02-23",
     "timestamp": 1771776000000,
-    "newcomer": 80168,
-    "researcher": 46922,
-    "scholar": 6569
+    "newcomer": 80159,
+    "researcher": 46920,
+    "scholar": 6570
   },
   {
     "date": "2026-02-24",
     "timestamp": 1771862400000,
-    "newcomer": 80993,
-    "researcher": 48059,
-    "scholar": 9472
+    "newcomer": 80984,
+    "researcher": 48057,
+    "scholar": 9473
   },
   {
     "date": "2026-02-25",
     "timestamp": 1771948800000,
-    "newcomer": 81923,
-    "researcher": 49362,
-    "scholar": 13581
+    "newcomer": 81914,
+    "researcher": 49360,
+    "scholar": 13582
   },
   {
     "date": "2026-02-26",
     "timestamp": 1772035200000,
-    "newcomer": 82523,
-    "researcher": 50421,
-    "scholar": 16206
+    "newcomer": 82514,
+    "researcher": 50419,
+    "scholar": 16207
   },
   {
     "date": "2026-02-27",
     "timestamp": 1772121600000,
-    "newcomer": 83128,
-    "researcher": 51278,
-    "scholar": 17817
+    "newcomer": 83119,
+    "researcher": 51276,
+    "scholar": 17818
   },
   {
     "date": "2026-02-28",
     "timestamp": 1772208000000,
-    "newcomer": 83629,
-    "researcher": 52204,
-    "scholar": 19006
+    "newcomer": 83620,
+    "researcher": 52202,
+    "scholar": 19007
   },
   {
     "date": "2026-03-01",
     "timestamp": 1772294400000,
-    "newcomer": 84985,
-    "researcher": 54008,
-    "scholar": 20522
+    "newcomer": 84976,
+    "researcher": 54006,
+    "scholar": 20523
   },
   {
     "date": "2026-03-02",
-    "timestamp": 1772441090379,
-    "newcomer": 85526,
-    "researcher": 54736,
-    "scholar": 21252
+    "timestamp": 1772380800000,
+    "newcomer": 86238,
+    "researcher": 55675,
+    "scholar": 21861
   },
   {
     "date": "2026-03-03",
-    "timestamp": 1772504549495,
-    "newcomer": 86391,
-    "researcher": 55769,
-    "scholar": 22008
+    "timestamp": 1772467200000,
+    "newcomer": 87064,
+    "researcher": 56759,
+    "scholar": 24133
   },
   {
     "date": "2026-03-04",
-    "timestamp": 1772590101038,
-    "newcomer": 87329,
-    "researcher": 57140,
-    "scholar": 24607
+    "timestamp": 1772553600000,
+    "newcomer": 88504,
+    "researcher": 58879,
+    "scholar": 27613
   },
   {
     "date": "2026-03-05",
-    "timestamp": 1772676684084,
-    "newcomer": 89068,
-    "researcher": 59242,
-    "scholar": 28238
+    "timestamp": 1772640000000,
+    "newcomer": 90371,
+    "researcher": 60629,
+    "scholar": 30515
   },
   {
     "date": "2026-03-06",
-    "timestamp": 1772763016987,
-    "newcomer": 90680,
-    "researcher": 60910,
-    "scholar": 30790
+    "timestamp": 1772726400000,
+    "newcomer": 91415,
+    "researcher": 61952,
+    "scholar": 31722
   },
   {
     "date": "2026-03-07",
-    "timestamp": 1772849018819,
-    "newcomer": 91637,
-    "researcher": 62208,
-    "scholar": 31925
+    "timestamp": 1772812800000,
+    "newcomer": 92625,
+    "researcher": 63642,
+    "scholar": 33216
   },
   {
     "date": "2026-03-08",
-    "timestamp": 1772936476329,
-    "newcomer": 93371,
-    "researcher": 64362,
-    "scholar": 33774
+    "timestamp": 1772899200000,
+    "newcomer": 94199,
+    "researcher": 65715,
+    "scholar": 35372
   },
   {
     "date": "2026-03-09",
-    "timestamp": 1773022944437,
-    "newcomer": 94944,
-    "researcher": 66314,
-    "scholar": 35616
+    "timestamp": 1772985600000,
+    "newcomer": 96152,
+    "researcher": 68458,
+    "scholar": 36376
   },
   {
     "date": "2026-03-10",
-    "timestamp": 1773108443200,
-    "newcomer": 96264,
-    "researcher": 68690,
-    "scholar": 36786
+    "timestamp": 1773072000000,
+    "newcomer": 97326,
+    "researcher": 69779,
+    "scholar": 38244
   },
   {
     "date": "2026-03-11",
-    "timestamp": 1773194813774,
-    "newcomer": 98010,
-    "researcher": 70520,
-    "scholar": 39177
+    "timestamp": 1773158400000,
+    "newcomer": 98961,
+    "researcher": 71786,
+    "scholar": 42858
   },
   {
     "date": "2026-03-12",
-    "timestamp": 1773281575933,
-    "newcomer": 99252,
-    "researcher": 72041,
-    "scholar": 43663
+    "timestamp": 1773244800000,
+    "newcomer": 100072,
+    "researcher": 73074,
+    "scholar": 46997
   },
   {
     "date": "2026-03-13",
-    "timestamp": 1773367823149,
-    "newcomer": 100330,
-    "researcher": 73373,
-    "scholar": 47570
+    "timestamp": 1773331200000,
+    "newcomer": 101080,
+    "researcher": 74256,
+    "scholar": 49492
   },
   {
     "date": "2026-03-14",
-    "timestamp": 1773454111967,
-    "newcomer": 102033,
-    "researcher": 75055,
-    "scholar": 51543
+    "timestamp": 1773417600000,
+    "newcomer": 104555,
+    "researcher": 77805,
+    "scholar": 55185
   }
 ];
