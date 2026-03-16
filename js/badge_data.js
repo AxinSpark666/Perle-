@@ -332,11 +332,11 @@ window.BADGE_HISTORY = [
   },
   {
     "date": "2026-03-16",
-    "timestamp": 1773627089830,
-    "newcomer": 119162,
-    "researcher": 93483,
-    "scholar": 72894,
-    "speed_demon": 23009,
+    "timestamp": 1773628486846,
+    "newcomer": 119300,
+    "researcher": 93626,
+    "scholar": 73062,
+    "speed_demon": 23030,
     "human_captcha": 59494
   }
 ];
