@@ -203,6 +203,17 @@ function generateBadgeHTML(badge, isLoading = false) {
 
 // 初始化
 document.addEventListener('DOMContentLoaded', async () => {
+    // 优先从 window.BADGE_HISTORY 中获取 Human CAPTCHA 的最新数据
+    if (window.BADGE_HISTORY && window.BADGE_HISTORY.length > 0) {
+        const latestData = window.BADGE_HISTORY[window.BADGE_HISTORY.length - 1];
+        if (latestData && latestData.human_captcha !== undefined) {
+            const humanCaptchaBadge = badgesData.find(b => b.id === 'human_captcha');
+            if (humanCaptchaBadge) {
+                humanCaptchaBadge.holders = latestData.human_captcha;
+            }
+        }
+    }
+
     await renderBadges();
     await renderGrowthChart(); // 改为 async 以支持 fetch
 });
@@ -265,9 +276,9 @@ async function renderGrowthChart() {
         
         // 解析真实数据
         labels = realHistory.map(entry => entry.date.slice(5)); // 取 MM-DD
-        newcomerData = realHistory.map(entry => entry.newcomer);
-        researcherData = realHistory.map(entry => entry.researcher);
-        scholarData = realHistory.map(entry => entry.scholar);
+        newcomerData = realHistory.map(entry => entry.newcomer || 0);
+        researcherData = realHistory.map(entry => entry.researcher || 0);
+        scholarData = realHistory.map(entry => entry.scholar || 0);
         
         // 检查是否需要追加今日实时数据
         const lastEntry = realHistory[realHistory.length - 1];
@@ -312,9 +323,9 @@ async function renderGrowthChart() {
             labels.push(`${date.getMonth() + 1}/${date.getDate()}`);
         }
 
-        const newcomerCount = badgesData[0].holders || 73000;
-        const researcherCount = badgesData[1].holders || 32000;
-        const scholarCount = badgesData[2].holders || 5000;
+        const newcomerCount = badgesData.find(b => b.id === 'newcomer')?.holders || 73000;
+        const researcherCount = badgesData.find(b => b.id === 'researcher')?.holders || 32000;
+        const scholarCount = badgesData.find(b => b.id === 'scholar')?.holders || 5000;
 
         newcomerData = generateMockHistory(newcomerCount);
         researcherData = generateMockHistory(researcherCount);

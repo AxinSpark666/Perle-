@@ -322,21 +322,12 @@ window.BADGE_HISTORY = [
     "scholar": 55185
   },
   {
-    "date": "2026-03-15",
-    "timestamp": 1773542027516,
-    "newcomer": 111781,
-    "researcher": 84107,
-    "scholar": 61425,
-    "speed_demon": 20931,
-    "human_captcha": 46730
-  },
-  {
     "date": "2026-03-16",
-    "timestamp": 1773628486846,
-    "newcomer": 119300,
-    "researcher": 93626,
-    "scholar": 73062,
-    "speed_demon": 23030,
+    "timestamp": 1773628272716,
+    "newcomer": 119286,
+    "researcher": 93615,
+    "scholar": 73034,
+    "speed_demon": 23026,
     "human_captcha": 59494
   }
 ];
