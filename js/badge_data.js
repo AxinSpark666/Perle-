@@ -329,5 +329,14 @@ window.BADGE_HISTORY = [
     "scholar": 73034,
     "speed_demon": 23026,
     "human_captcha": 59494
+  },
+  {
+    "date": "2026-03-17",
+    "timestamp": 1773713598352,
+    "newcomer": 124812,
+    "researcher": 100287,
+    "scholar": 80933,
+    "speed_demon": 23762,
+    "human_captcha": 59514
   }
 ];
