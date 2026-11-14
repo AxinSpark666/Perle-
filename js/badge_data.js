@@ -2398,5 +2398,10 @@ window.BADGE_HISTORY = [
     "date": "2026-11-13",
     "timestamp": 1794547724444,
     "newcomer": 127293
+  },
+  {
+    "date": "2026-11-14",
+    "timestamp": 1794633526870,
+    "newcomer": 127293
   }
 ];
