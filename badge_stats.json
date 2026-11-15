@@ -2403,5 +2403,11 @@
     "date": "2026-11-14",
     "timestamp": 1794633526870,
     "newcomer": 127293
+  },
+  {
+    "date": "2026-11-15",
+    "timestamp": 1794719691593,
+    "newcomer": 127293,
+    "researcher": 1
   }
 ]
