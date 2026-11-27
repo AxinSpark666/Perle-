@@ -2473,5 +2473,14 @@
     "date": "2026-11-26",
     "timestamp": 1795677087890,
     "newcomer": 127293
+  },
+  {
+    "date": "2026-11-27",
+    "timestamp": 1795763251559,
+    "newcomer": 127293,
+    "researcher": 102881,
+    "scholar": 82594,
+    "speed_demon": 24268,
+    "human_captcha": 59514
   }
 ]
